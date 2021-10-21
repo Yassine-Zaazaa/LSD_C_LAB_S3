@@ -1,8 +1,22 @@
-SRC = main.c ex1.c ex2.c ex4.c
-PROG = foo
+SRC = ex1.c ex2.c ex4.c
+PROG = bitwise
+LIB = bitwise.a
+OBJ = ex1.o ex2.o ex4.o
 
-all:
-	gcc $(SRC) -o $(PROG)
+all: $(LIB)
+
+$(LIB):
+	gcc -c $(SRC) 
+	ar rcs $(LIB) $(OBJ)
 
 clean:
-	rm $(PROG)
+	rm $(OBJ)
+
+fclean:
+	rm $(OBJ) $(LIB)
+
+re:
+	rm $(OBJ) $(LIB)
+	gcc -c $(SRC) 
+	ar rcs $(LIB) $(OBJ)
+
