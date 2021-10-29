@@ -1,4 +1,4 @@
-SRC = dichotomie.c dichotomie2.c main.c Newton.c sq_2.c g.c
+SRC = dichotomie.c dichotomie2.c main.c Newton.c function.c
 
 PROG = foo
 
