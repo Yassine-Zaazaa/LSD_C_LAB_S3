@@ -10,6 +10,6 @@
 # include <stdlib.h>
 #include "../../projects/libft/libft.h"
 
-char *get_next_line(int fd);
+char    *get_next_line(int fd);
 char *ft_strapp(const char *s, char c);
 #endif
